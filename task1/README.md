@@ -34,7 +34,31 @@ exit(1);</br>
 int pid = fork();</br></br>
 Затем приложение выведет PID процессы в котором находится.</br>
 printf("my pid = %i, returned pid = %i\n", getpid(), pid);</br>
-printf("my pid = %i, returned pid = %i\n", getpid(), pid);</br>
+printf("my pid = %i, returned pid = %i\n", getpid(), pid);</br></br>
+
+#### Program4</br></br>
+В самом начале программа получает сигнал от пользователя и обрабатывает его.</br>
+Затем задаётся глобальная переменная-счётчик counter. </br>
+int counter = 0;</br></br>
+Также в программе присутствуют две обрабатывающие функции - handler1.</br>
+void handler1(int sig)</br>
+{</br>
+  counter++;</br>
+  printf("counter = %d\n", counter);</br>
+  /* Flushes the printed string to stdout */</br>
+  fflush(stdout);</br>
+  kill(pid, SIGUSR1);</br>
+}</br></br>
+И функция handler2 </br>
+void handler2(int sig)</br>
+{</br>
+  counter += 3;</br>
+  printf("counter = %d\n", counter);</br>
+  exit(0);</br>
+}</br>
+Обработка: Программа привязывает первую функцию обработки к текущему процессу.</br>
+Далее если процесс окажется дочерним, сигнал будет обрабатывать функция handler2.</br></br>
+
 
 
 
