@@ -13,7 +13,8 @@ printf("Allocated %lu bytes\n", length * sizeof(*array)); </br></br>
 if (array != NULL)</br>
 {</br>
 free(array);</br>
-}</br>
+}</br></br>
+Program2</br></br>
 
 
 
