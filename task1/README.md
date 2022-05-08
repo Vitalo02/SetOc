@@ -30,6 +30,12 @@ perror("close file error:");</br>
 exit(1);</br>
 }</br></br>
 #### Program3</br></br>
+Сначала программа вызывает функцию fork(), которая создаёт дочерний процесс </br>
+int pid = fork();</br></br>
+Затем приложение выведет PID процессы в котором находится.</br>
+printf("my pid = %i, returned pid = %i\n", getpid(), pid);</br>
+printf("my pid = %i, returned pid = %i\n", getpid(), pid);</br>
+
 
 
 
