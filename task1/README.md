@@ -10,7 +10,8 @@ if ((array = (int * ) malloc(length * sizeof(int))) != NULL)</br></br>
 После этого идет вывод количество байтов, которое было выделено.</br>
 printf("Allocated %lu bytes\n", length * sizeof(*array)); </br></br>
 Если всё прошло без ошибок, программа очистит выделенную память.</br>
-if (array != NULL) {</br>
+if (array != NULL)</br>
+{</br>
 free(array);</br>
 }</br>
 
