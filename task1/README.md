@@ -1,6 +1,6 @@
 # Первое задание по Сетевым Операционным Системам
 ## Описание работы программы</br></br>
-Program1</br></br>
+###Program1</br></br>
 
 Указание длины массива. </br>
 printf("Enter length of array: ");</br>
@@ -14,7 +14,7 @@ if (array != NULL)</br>
 {</br>
 free(array);</br>
 }</br></br>
-Program2</br></br>
+###Program2</br></br>
 
 
 
